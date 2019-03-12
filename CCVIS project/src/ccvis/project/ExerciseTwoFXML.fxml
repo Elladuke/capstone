@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ccvis.project.ExerciseTwoFXMLController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="526.0" prefWidth="620.0" styleClass="anchorpane" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/anchorpane.css">
+         <children>
+            <Label layoutX="42.0" layoutY="97.0" prefHeight="46.0" prefWidth="462.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="The questions are meant to test your undertanding of " />
+            <Button fx:id="next_btn" layoutX="472.0" layoutY="478.0" mnemonicParsing="false" onAction="#goto_exercise_three" prefHeight="34.0" prefWidth="64.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Next" />
+            <Button fx:id="exit_btn" layoutX="561.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="X" />
+            <Line endX="293.0" layoutX="314.0" layoutY="79.0" startX="-304.0" stroke="#f71735" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="128.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="computational complexity so far. You will be able to see the" />
+            <Label layoutX="42.0" layoutY="158.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="correct answers as you go on." />
+            <Label layoutX="42.0" layoutY="230.0" prefHeight="46.0" prefWidth="537.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="How can we know that a given problem is in NP? (Tick applicable)" />
+            <CheckBox fx:id="chk1" layoutX="42.0" layoutY="276.0" mnemonicParsing="false" onAction="#chk_box_1" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="When it is computable by a polynomial time algorithm" />
+            <CheckBox fx:id="chk3" layoutX="42.0" layoutY="355.0" mnemonicParsing="false" onAction="#chk_box_3" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Use the nature of the problem to judge" />
+            <CheckBox fx:id="chk2" layoutX="42.0" layoutY="314.0" mnemonicParsing="false" onAction="#chk_box_2" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="By reducing it to known NP problems" />
+            <CheckBox fx:id="chk4" layoutX="42.0" layoutY="395.0" mnemonicParsing="false" onAction="#chk_box_4" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="It is impossible to tell" />
+            <Button fx:id="next_btn1" layoutX="55.0" layoutY="478.0" mnemonicParsing="false" onAction="#goto_exercise" prefHeight="34.0" prefWidth="80.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Back" />
+            <Label fx:id="ans" layoutX="62.0" layoutY="423.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
+            <Label layoutX="263.0" layoutY="23.0" prefHeight="46.0" prefWidth="95.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Exercise 2" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ccvis.project.ExerciseOneFXMLController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="620.0" styleClass="anchorpane" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/anchorpane.css">
+         <children>
+            <Label layoutX="42.0" layoutY="97.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="There are 5 questions in this section. The questions are meant " />
+            <Button fx:id="next_btn" layoutX="492.0" layoutY="430.0" mnemonicParsing="false" onAction="#goto_exercise_two" prefHeight="34.0" prefWidth="66.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Next" />
+            <Button fx:id="exit_btn" layoutX="561.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="X" />
+            <Line endX="293.0" layoutX="314.0" layoutY="79.0" startX="-304.0" stroke="#f71735" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="128.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="to test your undertanding of computational complexity so far." />
+            <Label layoutX="42.0" layoutY="158.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="You will be able to see the correct answers as you go on." />
+            <Label layoutX="265.0" layoutY="19.0" prefHeight="46.0" prefWidth="90.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Exercise 1" />
+            <Label layoutX="42.0" layoutY="230.0" prefHeight="46.0" prefWidth="537.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Which of the following is not a known NP problem?" />
+            <RadioButton fx:id="rb2" layoutX="42.0" layoutY="323.0" mnemonicParsing="false" onAction="#clicked_rb2" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Hamiltonian circuit problem">
+               <toggleGroup>
+                  <ToggleGroup fx:id="red" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="rb4" layoutX="42.0" layoutY="392.0" mnemonicParsing="false" onAction="#clicked_rb4" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="M-coloring problem" toggleGroup="$red" />
+            <RadioButton fx:id="rb3" layoutX="42.0" layoutY="357.0" mnemonicParsing="false" onAction="#clicked_rb3" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Knapsack problem" toggleGroup="$red" />
+            <RadioButton fx:id="rb1" layoutX="42.0" layoutY="289.0" mnemonicParsing="false" onAction="#clicked_rb1" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Travelling salesman problem" toggleGroup="$red" />
+            <Label fx:id="ans1" layoutX="309.0" layoutY="334.0" prefHeight="46.0" prefWidth="287.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
+            <Button fx:id="next_btn1" layoutX="49.0" layoutY="430.0" mnemonicParsing="false" onAction="#catcomp" prefHeight="34.0" prefWidth="66.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+.anchorpane { 
+   -fx-background-color: #ff9f1c; 
+   -fx-text-fill: #011627; 
+   -fx-font-family: Garamond;
+   -fx-font-size: 18px;
+   -fx-border-color: #011627;
+   -fx-border-width:6px;
+   
+   /*-fx-border: 12px solid green;
+*/
+}
+
+.anchorpane_anim { 
+   -fx-background-color: #f71735; 
+   -fx-text-fill: #011627; 
+   -fx-font-family: Garamond;
+   -fx-font-size: 18px;
+   -fx-border-color: #011627;
+   -fx-border-width:6px;
+   /*-fx-border: 12px solid green;
+*/
+}

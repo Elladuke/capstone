@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ccvis.project.PReductionController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="apane" prefHeight="683.0" prefWidth="806.0" styleClass="anchorpane_anim" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/anchorpane.css">
+         <children>
+            <MenuBar id="menubar" fx:id="menu_bar" layoutX="127.0" layoutY="16.0" prefHeight="52.0" prefWidth="458.0" style="-fx-border-width: 2px;" styleClass="menubar_anim" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/menubar.css">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" text="Introduction">
+                     <items>
+                        <MenuItem fx:id="welcome_id" mnemonicParsing="false" onAction="#goto_welcome" styleClass="menuitem_anim" text="Welcome" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_introintro" styleClass="menuitem_anim" text="Computational Complexity" />
+                        <MenuItem fx:id="types_id" mnemonicParsing="false" onAction="#goto_intro_types" styleClass="menuitem_anim" text="Types of complexity" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="menu_animation" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menu" text="Animations">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goto_pproblem" styleClass="menuitem_anim" text="P-problem" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_npproblem" styleClass="menuitem_anim" text="NP-problem" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="menu_reduction" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menu" text="Reductions">
+                     <items>
+                        <MenuItem mnemonicParsing="false" styleClass="menuitem_anim" text="P-problem Reduction" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_npreduc" styleClass="menuitem_anim" text="NP-problem Reduction" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_catcomp" styleClass="menuitem_anim" text="Categorizing Complexity" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="menu_exercise" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menu" text="Exercises">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goto_exercise" styleClass="menuitem_anim" text="Test knowledge" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Label layoutX="127.0" layoutY="68.0" prefHeight="52.0" prefWidth="458.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="P-PROBLEM REDUCTION - 3 SAT to M-coloring" />
+            <Button fx:id="intro_two_next_btn" layoutX="690.0" layoutY="611.0" mnemonicParsing="false" onAction="#goto_npreduc" prefHeight="37.0" prefWidth="60.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Next" />
+            <Button fx:id="exit_btn" layoutX="755.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="X" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/logo.png" />
+               </image>
+            </ImageView>
+            <Line endX="293.0" layoutX="325.0" layoutY="279.0" startX="-304.0" stroke="#f71735" />
+            <Button fx:id="intro_two_back_btn1" layoutX="56.0" layoutY="611.0" mnemonicParsing="false" onAction="#goto_npproblem" prefHeight="37.0" prefWidth="60.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Back" />
+            <Button fx:id="stop_btn" layoutX="690.0" layoutY="414.0" mnemonicParsing="false" onAction="#pause_anim" prefHeight="37.0" prefWidth="74.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Pause" />
+            <Button fx:id="start_btn11" layoutX="690.0" layoutY="323.0" mnemonicParsing="false" onAction="#play_anim" prefHeight="37.0" prefWidth="60.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Play" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

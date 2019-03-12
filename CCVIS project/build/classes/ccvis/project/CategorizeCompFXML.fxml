@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ccvis.project.CategorizeCompFXMLController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="707.0" styleClass="anchorpane_anim" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/anchorpane.css">
+         <children>
+            <MenuBar id="menubar" fx:id="menu_bar" layoutX="103.0" layoutY="20.0" prefHeight="52.0" prefWidth="455.0" style="-fx-border-width: 2px;" styleClass="menubar_anim" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/menubar.css">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" text="Introduction">
+                     <items>
+                        <MenuItem fx:id="welcome_id" mnemonicParsing="false" onAction="#goto_welcome" styleClass="menuitem" text="Welcome" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_introintro" styleClass="menuitem" text="Computational Complexity" />
+                        <MenuItem fx:id="types_id" mnemonicParsing="false" onAction="#goto_intro_types" styleClass="menuitem" text="Types of complexity" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="menu_animation" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menu" text="Animations">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goto_pproblem" styleClass="menuitem" text="P-problem" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_npproblem" styleClass="menuitem" text="NP-problem" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="menu_reduction" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menu" text="Reductions">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goto_pproblemreduc" styleClass="menuitem" text="P-problem Reduction" />
+                        <MenuItem mnemonicParsing="false" text="NP-problem Reduction" />
+                        <MenuItem mnemonicParsing="false" text="Categorizing Complexity" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="menu_exercise" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menu" text="Exercises">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goto_exercise" styleClass="menuitem" text="Test knowledge" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Label layoutX="276.0" layoutY="58.0" prefHeight="52.0" prefWidth="200.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Categorize Complexity " />
+            <Button layoutX="574.0" layoutY="547.0" mnemonicParsing="false" onAction="#goto_exercise" prefHeight="37.0" prefWidth="60.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Next" />
+            <Button fx:id="exit_btn" layoutX="656.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="X" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/logo.png" />
+               </image>
+            </ImageView>
+            <Line endX="293.0" layoutX="318.0" layoutY="296.0" startX="-304.0" stroke="#f71735" />
+            <Button layoutX="127.0" layoutY="547.0" mnemonicParsing="false" onAction="#goto_npproblemreduc" prefHeight="37.0" prefWidth="60.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Back" />
+            <Ellipse fx:id="pprob_id" fill="#21ff33" layoutX="180.0" layoutY="224.0" radiusX="154.0" radiusY="80.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fx:id="npprob_id" fill="#c82dcf" layoutX="528.0" layoutY="224.0" onDragEntered="#setOnDragEntered_np" radiusX="144.0" radiusY="80.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="469.0" layoutY="322.0" prefHeight="52.0" prefWidth="179.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="NP-Complete group" />
+            <Label layoutX="99.0" layoutY="322.0" prefHeight="52.0" prefWidth="147.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="P problem group" />
+            <Label layoutX="134.0" layoutY="92.0" prefHeight="52.0" prefWidth="439.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Put the problem at the bottom in their right groups" />
+            <Label fx:id="np_Prob2" layoutX="97.0" layoutY="477.0" onDragDetected="#setOnDragDetected2_np" onDragDone="#setOnDragDone2_np" onDragEntered="#setOnMouseDragged2_np" onDragOver="#setOnDragOver2_np" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Knapsack problem" />
+            <Label fx:id="np_Prob3" layoutX="276.0" layoutY="444.0" onDragDetected="#setOnDragDetected3_np" onDragDone="#setOnDragDone3_np" onDragEntered="#setOnMouseDragged3_np" onDragOver="#setOnDragOver3_np" prefHeight="25.0" prefWidth="158.0" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="3-CNF Satisfiability" />
+            <Label fx:id="p_Prob1" layoutX="85.0" layoutY="433.0" onDragDetected="#setOnDragDetected1_p" onDragDone="#setOnDragDone1_p" onDragEntered="#setOnMouseDragged1_p" onDragOver="#setOnDragOver1_p" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="M-coloring problem" />
+            <Label fx:id="np_Prob1" layoutX="476.0" layoutY="455.0" onDragDetected="#setOnDragDetected1_np" onDragDone="#setOnDragDone1_np" onDragEntered="#setOnMouseDragged1_np" onDragOver="#setOnDragOver1_np" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Bin-packing problem" />
+            <Label fx:id="np_Prob" layoutX="134.0" layoutY="396.0" onDragDetected="#setOnDragDetected_np" onDragDone="#setOnDragDone_np" onDragEntered="#setOnMouseDragged_np" onDragOver="#setOnDragOver_np" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Hamiltonian circuit problem" textFill="#7d13e1" />
+            <Label fx:id="p_Prob3" layoutX="462.0" layoutY="408.0" onDragDetected="#setOnDragDetected3_p" onDragDone="#setOnDragDone3_p" onDragEntered="#setOnMouseDragged3_p" onDragOver="#setOnDragOver3_p" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Linear Programming" />
+            <Label fx:id="p_Prob2" layoutX="302.0" layoutY="499.0" onDragDetected="#setOnDragDetected2_p" onDragDone="#setOnDragDone2_p" onDragEntered="#setOnMouseDragged2_p" onDragOver="#setOnDragOver2_p" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Greatest Common divisor" />
+            <Ellipse fx:id="ham_ellip" fill="DODGERBLUE" layoutX="447.0" layoutY="186.0" onDragDropped="#setOnDragDropped_np" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fx:id="cnf_eliip" fill="DODGERBLUE" layoutX="447.0" layoutY="287.0" onDragDropped="#setOnDragDropped3_np" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fx:id="bin_ellip" fill="DODGERBLUE" layoutX="623.0" layoutY="287.0" onDragDropped="#setOnDragDropped1_np" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fx:id="knap_ellip" fill="DODGERBLUE" layoutX="623.0" layoutY="186.0" onDragDropped="#setOnDragDropped2_np" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="knap_lab3" layoutX="534.0" layoutY="187.0" prefHeight="25.0" prefWidth="179.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
+            <Label fx:id="bin_lab2" layoutX="528.0" layoutY="292.0" prefHeight="25.0" prefWidth="213.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
+            <Label fx:id="cnf3" layoutX="358.0" layoutY="262.0" prefHeight="25.0" prefWidth="179.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
+            <Label fx:id="ham_lab" layoutX="341.0" layoutY="162.0" prefHeight="25.0" prefWidth="231.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
+            <Ellipse fx:id="mcol_ellip" fill="DODGERBLUE" layoutX="97.0" layoutY="186.0" onDragDropped="#setOnDragDropped1_p" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fx:id="linprog_ellip" fill="DODGERBLUE" layoutX="171.0" layoutY="292.0" onDragDropped="#setOnDragDropped3_p" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+            <Ellipse fx:id="gcd_ellip" fill="DODGERBLUE" layoutX="262.0" layoutY="187.0" onDragDropped="#setOnDragDropped2_p" radiusX="51.0" radiusY="48.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="mcol_lab" layoutX="24.0" layoutY="179.0" prefHeight="25.0" prefWidth="164.0" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
+            <Label fx:id="gcd_lab" layoutX="202.0" layoutY="179.0" prefHeight="25.0" prefWidth="147.0" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
+            <Label fx:id="linprog_lab" layoutX="106.0" layoutY="284.0" prefHeight="25.0" prefWidth="164.0" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
