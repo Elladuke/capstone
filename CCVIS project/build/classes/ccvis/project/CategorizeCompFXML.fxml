@@ -19,27 +19,27 @@
                <menus>
                   <Menu mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" text="Introduction">
                      <items>
-                        <MenuItem fx:id="welcome_id" mnemonicParsing="false" onAction="#goto_welcome" styleClass="menuitem" text="Welcome" />
-                        <MenuItem mnemonicParsing="false" onAction="#goto_introintro" styleClass="menuitem" text="Computational Complexity" />
-                        <MenuItem fx:id="types_id" mnemonicParsing="false" onAction="#goto_intro_types" styleClass="menuitem" text="Types of complexity" />
+                        <MenuItem fx:id="welcome_id" mnemonicParsing="false" onAction="#goto_welcome" styleClass="menuitem_anim" text="Welcome" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_introintro" styleClass="menuitem_anim" text="Computational Complexity" />
+                        <MenuItem fx:id="types_id" mnemonicParsing="false" onAction="#goto_intro_types" styleClass="menuitem_anim" text="Types of complexity" />
                      </items>
                   </Menu>
                   <Menu fx:id="menu_animation" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menu" text="Animations">
                      <items>
-                        <MenuItem mnemonicParsing="false" onAction="#goto_pproblem" styleClass="menuitem" text="P-problem" />
-                        <MenuItem mnemonicParsing="false" onAction="#goto_npproblem" styleClass="menuitem" text="NP-problem" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_pproblem" styleClass="menuitem_anim" text="P-problem" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_npproblem" styleClass="menuitem_anim" text="NP-problem" />
                      </items>
                   </Menu>
                   <Menu fx:id="menu_reduction" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menu" text="Reductions">
                      <items>
-                        <MenuItem mnemonicParsing="false" onAction="#goto_pproblemreduc" styleClass="menuitem" text="P-problem Reduction" />
-                        <MenuItem mnemonicParsing="false" text="NP-problem Reduction" />
-                        <MenuItem mnemonicParsing="false" text="Categorizing Complexity" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_pproblemreduc" styleClass="menuitem_anim" text="P-problem Reduction" />
+                        <MenuItem mnemonicParsing="false" styleClass="menuitem_anim" text="NP-problem Reduction" />
+                        <MenuItem mnemonicParsing="false" styleClass="menuitem_anim" text="Categorizing Complexity" />
                      </items>
                   </Menu>
                   <Menu fx:id="menu_exercise" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menu" text="Exercises">
                      <items>
-                        <MenuItem mnemonicParsing="false" onAction="#goto_exercise" styleClass="menuitem" text="Test knowledge" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_exercise" styleClass="menuitem_anim" text="Test knowledge" />
                      </items>
                   </Menu>
                </menus>
