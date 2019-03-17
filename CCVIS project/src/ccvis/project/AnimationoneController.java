@@ -357,12 +357,15 @@ public class AnimationoneController implements Initializable {
             System.out.println("printing graph content" + Arrays.toString(g[sub_val]));
             sub_val += 1;
         }
-            Stage stagea = (Stage) exit_btn.getScene().getWindow();
-            Group root = new Group( line_layer, line_uncol_layer, uncol_vert_layer, vert_layer); 
+            Stage stagec = (Stage) exit_btn.getScene().getWindow();
+            stagec.close();
+            Stage stagea = new Stage();
+           // Group root = new Group( line_layer, line_uncol_layer, uncol_vert_layer, vert_layer); 
+            Group root = new Group(  line_uncol_layer, uncol_vert_layer); 
             
             //label
             Label nte = makeLabel("Notice that no two vertices with the same color are connected", 50,50);
-            Label nte1 = makeLabel("Click to see how the graph is colored", 80,80);
+            Label nte1 = makeLabel("Click the check button to see how the graph is colored", 90,80);
             //create back btn for 
             Button back = new Button("Back");
             back.setStyle("-fx-font: 18 Garamond; -fx-background-color: #011627; -fx-text-fill: #fdfffc; ");
@@ -381,6 +384,16 @@ public class AnimationoneController implements Initializable {
             root.getChildren().add(see_new);
             root.getChildren().add(nte);
             root.getChildren().add(nte1);
+            
+              check.setOnAction(new EventHandler<ActionEvent>() {
+            
+            public void handle(ActionEvent event) {
+           
+                root.getChildren().add(line_layer);
+                root.getChildren().add(vert_layer);
+                
+            }
+        });
             Scene scenea = new Scene(root, width, height);  
             scenea.setFill(bgc);
             //Adding scene to the stage 
@@ -408,6 +421,16 @@ public class AnimationoneController implements Initializable {
                 } catch (IOException ex) {
                     Logger.getLogger(AnimationoneController.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                
+            }
+        });
+            
+          see_new.setOnAction(new EventHandler<ActionEvent>() {
+            
+            public void handle(ActionEvent event) {
+                Stage stager = (Stage) see_new.getScene().getWindow();
+                stager.close();
+                play_vert_and_m(event);
                 
             }
         });
