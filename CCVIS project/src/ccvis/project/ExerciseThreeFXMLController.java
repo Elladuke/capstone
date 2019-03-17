@@ -82,21 +82,21 @@ public class ExerciseThreeFXMLController implements Initializable {
     @FXML
     private void clicked_1(ActionEvent event) {
         if(ck1.isSelected() ){
-            ans.setText("Correct!" );
+            ans.setText("Correct, but there's another." );
         }
     }
 
     @FXML
     private void clicked_2(ActionEvent event) {
         if(ck2.isSelected() ){
-            ans.setText("This is an argument for P = NP" );
+            ans.setText("Correct, but there's another." );
         }
     }
 
     @FXML
     private void clicked_3(ActionEvent event) {
         if(ck3.isSelected() ){
-            ans.setText("None! There is an argument against P = NP." );
+            ans.setText("Great! Both are correct" );
         }
     }
 

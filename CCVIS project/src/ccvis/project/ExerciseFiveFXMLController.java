@@ -20,6 +20,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -42,6 +43,10 @@ public class ExerciseFiveFXMLController implements Initializable {
     private RadioButton ck3;
     @FXML
     private Label ans;
+    @FXML
+    private ToggleGroup blue;
+    @FXML
+    private Button next_btn11;
 
     /**
      * Initializes the controller class.
@@ -95,6 +100,13 @@ public class ExerciseFiveFXMLController implements Initializable {
         stage.setScene(new Scene(root1));
         stage.setResizable(false);
         stage.show();
+    }
+
+    @FXML
+    private void finish(ActionEvent event) {
+        
+        Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
     }
     
 }
