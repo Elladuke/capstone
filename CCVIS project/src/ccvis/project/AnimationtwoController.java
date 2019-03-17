@@ -410,12 +410,13 @@ public class AnimationtwoController implements Initializable {
         return final_final_answer;
     }
     
+    
     //function that animates knapsack
     @FXML
-    private void animate_knapsack(ActionEvent event) throws FileNotFoundException{
+    private void animate_knapsack(ActionEvent jevent) throws FileNotFoundException{
         
        
-        Image image;
+      Image image;
       image = new Image(new FileInputStream("C:\\Users\\Immanuella Duke\\OneDrive - Ashesi University\\Documents\\NetBeansProjects\\CCVIS project\\other_useful_resources\\knapsack.png"));
       
       //Setting the image view 
@@ -425,8 +426,11 @@ public class AnimationtwoController implements Initializable {
       imageView.setX(200); 
       imageView.setY(170); 
        //Setting the preserve ratio of the image view 
-      imageView.setPreserveRatio(true);  
-      Stage stagea = (Stage) exit_btn.getScene().getWindow();
+      imageView.setPreserveRatio(true); 
+      //here!!!
+      Stage stagec = (Stage) exit_btn.getScene().getWindow();
+      stagec.close();
+      Stage stagea = new Stage();
       //Creating a Group object  
       Group root = new Group(imageView);  
         int randomNum = ThreadLocalRandom.current().nextInt(1, 4);
@@ -475,18 +479,21 @@ public class AnimationtwoController implements Initializable {
             System.out.println("random number is "+ randomNum);
    
         }
-            
+          System.out.println("works till here 1");
         Pair<Pair<Integer, Integer>, Pair<int[], int[]>> knapsack_vals =  final_main_knapsack(values, weights, weight_capacity);
         
         //back button to leave animation
          Button back = new Button("Back");
          back.setStyle("-fx-font: 18 Garamond; -fx-background-color: #011627; -fx-text-fill: #fdfffc; ");
-       
+       //see an example
+       Button see_new = new Button("See another example");
+         see_new.setStyle("-fx-font: 18 Garamond; -fx-background-color: #011627; -fx-text-fill: #fdfffc; ");
+      
          Button check = new Button("Check");
          check.setStyle("-fx-font: 18 Garamond; -fx-background-color: #011627; -fx-text-fill: #fdfffc; ");
     
           //Creating an image 
-      
+       System.out.println("works till here 2");
       Color bgc = Color.valueOf("#f71735");
       Label info;
       info = new Label ("We need to put a combination of items in the bag with");
@@ -512,7 +519,7 @@ public class AnimationtwoController implements Initializable {
       info3.setLayoutY(140);
       info3.setStyle("-fx-font: 22 Garamond; -fx-text-fill: #fdfffc; ");
       
-      
+       System.out.println("works till here 3");
       
       //Creating a scene object 
       Scene scene = new Scene(root, 600, 500);  
@@ -520,6 +527,7 @@ public class AnimationtwoController implements Initializable {
       //add all attributes
       root.getChildren().add(back);
       root.getChildren().add(check);
+      root.getChildren().add(see_new);
       root.getChildren().add(info);
       root.getChildren().add(info1);
       root.getChildren().add(info2);
@@ -527,6 +535,9 @@ public class AnimationtwoController implements Initializable {
       //set position of check button
       check.setLayoutX(280.0);
       check.setLayoutY(420.0);
+      //set position of see new button
+      see_new.setLayoutX(430.0);
+      see_new.setLayoutY(0.0);
       
       //drawing the gold bars
       
@@ -539,15 +550,15 @@ public class AnimationtwoController implements Initializable {
       int texty_height = 145;
       int textx_width = 45; 
       
-     
-        
-         check.setOnAction(new EventHandler<ActionEvent>() {
-            
-            public void handle(ActionEvent event) {
-                 int goldy_rightheight = 140;
-                int gold_rightx = 400;
-                int texty_rightheight = 145;
-                int text_rightx = 410;
+             
+         System.out.println("works till here 4");
+    check.setOnAction(new EventHandler<ActionEvent>() {
+
+       public void handle(ActionEvent event) {
+            int goldy_rightheight = 140;
+           int gold_rightx = 400;
+           int texty_rightheight = 145;
+           int text_rightx = 410;
 
       //put the right gold bars on the right side of the knapsack
       for (int i = 0; i < weight_list.length; i++){
@@ -574,7 +585,7 @@ public class AnimationtwoController implements Initializable {
                      }
       
       }
-      
+      System.out.println("works till here 5");
       Pair<Integer, Integer> totals = knapsack_vals.getKey();
       int total_w = totals.getKey();
       int total_v = totals.getValue();
@@ -596,7 +607,7 @@ public class AnimationtwoController implements Initializable {
             }
         });
       
-      
+      System.out.println("works till here 6");
       //put the gold bars on the left side of the knapsack...animate the left side.
       for (int i = 0; i < weights.length; i++){
         Image gold;
@@ -619,7 +630,7 @@ public class AnimationtwoController implements Initializable {
       
       }
      
-     
+     System.out.println("works till here 7");
       back.setOnAction(new EventHandler<ActionEvent>() {
             
             public void handle(ActionEvent event) {
@@ -643,11 +654,35 @@ public class AnimationtwoController implements Initializable {
                 
             }
         });
+      System.out.println("works till here 8");
+      System.out.println("stage a:"+ stagea + "see scene"+ scene);
     //Setting title to the Stage 
-      stagea.setTitle("Knapsack Problem");  
+    //if (stagea == null){}
+    
+  
+    stagea.setTitle("Knapsack Problem");  
       
       //Adding scene to the stage 
       stagea.setScene(scene);
+      stagea.show();
+      
+      System.out.println("works till here 9");
+      see_new.setOnAction(new EventHandler<ActionEvent>() {
+          public void handle(ActionEvent event) {
+              Stage stager = (Stage) see_new.getScene().getWindow();
+              stager.close();
+              try {
+                  //start here
+                  animate_knapsack(event);
+                  //end here
+              } catch (FileNotFoundException ex) {
+                  Logger.getLogger(AnimationtwoController.class.getName()).log(Level.SEVERE, null, ex);
+              }
+          }
+         });
+      
+      
+      System.out.println("works till here 10");
     
     }
     

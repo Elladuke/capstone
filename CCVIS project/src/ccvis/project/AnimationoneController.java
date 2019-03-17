@@ -283,22 +283,23 @@ public class AnimationoneController implements Initializable {
         
         //aaray to keep cordinates of vertices.    
         double [][] coord_array = new double[V][2];
-        
+        //array to keep verts of other group
+        double [][] coord_uncol_array = new double[V][2];
         Group vert_layer = new Group();
-        int start_w = (width/2);
-        int start_h = height/2 + 50;
+        Group uncol_vert_layer = new Group();
+        int start_w = (width/2)+ 160;
+        int start_h = height/2 + 20;
+        int start_uncol_w = (width/2)- 160;
+        int start_uncol_h = height/2 + 20;
         double angle = (360/ V) * Math.PI/180;
         int n = 1;
         for (int i = 0; i < V; i++){
+            //for colored circle
             Circle circle = new Circle(); 
-            /*
-            Random r = new Random();
-            int low = 100;
-            int high1 = width - 40;
-            int high2 = height - 40;
-           */
-            double pos_x = start_w + 160*Math.sin(n *angle);
-            double pos_y = start_h + 160*Math.cos(n *angle);
+         
+        
+            double pos_x = start_w + 120*Math.sin(n *angle);
+            double pos_y = start_h + 120*Math.cos(n *angle);
             //Setting the position of the circle 
             circle.setCenterX(pos_x); 
             circle.setCenterY(pos_y); 
@@ -316,10 +317,27 @@ public class AnimationoneController implements Initializable {
             //Setting the stroke width of the circle 
             circle.setStrokeWidth(5);
             vert_layer.getChildren().add(circle);
+            //for uncolored circle
+            Circle uncol_circle = new Circle();
+            
+            double pos_uncol_x = start_uncol_w + 120*Math.sin(n *angle);
+            double pos_uncol_y = start_uncol_h + 120*Math.cos(n *angle);
+            
+            uncol_circle.setCenterX(pos_uncol_x); 
+            uncol_circle.setCenterY(pos_uncol_y); 
+            uncol_circle.setFill(Color.web("#f71735"));
+            coord_uncol_array[i][0] = pos_uncol_x;
+            coord_uncol_array[i][1] = pos_uncol_y;
+            uncol_circle.setRadius(30.0f); 
+            uncol_circle.setStrokeWidth(2);
+            uncol_circle.setStroke(Color.BLACK);
+            uncol_vert_layer.getChildren().add(uncol_circle);
+            
             n++;
             
         }     
         Group line_layer = new Group();
+        Group line_uncol_layer = new Group();
         //place edges between connected vertices
         int sub_val = 0;
         for (int[] sublist : g) {
@@ -329,22 +347,40 @@ public class AnimationoneController implements Initializable {
                     Line l = new Line(coord_array[sub_val][0], coord_array[sub_val][1], 
                     coord_array[i][0], coord_array[i][1]);
                     line_layer.getChildren().add(l);
+                    
+                    Line u = new Line(coord_uncol_array[sub_val][0], coord_uncol_array[sub_val][1], 
+                    coord_uncol_array[i][0], coord_uncol_array[i][1]);
+                    line_uncol_layer.getChildren().add(u);
+                    
                 }
             }
             System.out.println("printing graph content" + Arrays.toString(g[sub_val]));
             sub_val += 1;
         }
             Stage stagea = (Stage) exit_btn.getScene().getWindow();
-            Group root = new Group( line_layer, vert_layer); 
+            Group root = new Group( line_layer, line_uncol_layer, uncol_vert_layer, vert_layer); 
             
             //label
             Label nte = makeLabel("Notice that no two vertices with the same color are connected", 50,50);
-         
+            Label nte1 = makeLabel("Click to see how the graph is colored", 80,80);
             //create back btn for 
             Button back = new Button("Back");
             back.setStyle("-fx-font: 18 Garamond; -fx-background-color: #011627; -fx-text-fill: #fdfffc; ");
+            Button see_new = new Button("See another example");
+            see_new.setStyle("-fx-font: 18 Garamond; -fx-background-color: #011627; -fx-text-fill: #fdfffc; ");
+           Button check = new Button("Check");
+            check.setStyle("-fx-font: 18 Garamond; -fx-background-color: #011627; -fx-text-fill: #fdfffc; ");
+           //set positions of the buttons
+            see_new.setLayoutX(530);
+           see_new.setLayoutY(0);
+           check.setLayoutX(330);
+           check.setLayoutY(430);
+           
             root.getChildren().add(back);
+            root.getChildren().add(check);
+            root.getChildren().add(see_new);
             root.getChildren().add(nte);
+            root.getChildren().add(nte1);
             Scene scenea = new Scene(root, width, height);  
             scenea.setFill(bgc);
             //Adding scene to the stage 
