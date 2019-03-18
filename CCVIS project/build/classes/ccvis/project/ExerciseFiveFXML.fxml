@@ -11,30 +11,30 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ccvis.project.ExerciseFiveFXMLController">
    <children>
-      <AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="516.0" prefWidth="620.0" styleClass="anchorpane" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/anchorpane.css">
+      <AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="516.0" prefWidth="620.0" styleClass="anchorpane" stylesheets="@../../../other_useful_resources/anchorpane.css">
          <children>
-            <Label layoutX="42.0" layoutY="97.0" prefHeight="46.0" prefWidth="462.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="The questions are meant to test your undertanding of " />
-            <Button fx:id="exit_btn" layoutX="561.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="X" />
+            <Label layoutX="42.0" layoutY="97.0" prefHeight="46.0" prefWidth="462.0" styleClass="labels" stylesheets="@../../../other_useful_resources/labels.css" text="The questions are meant to test your undertanding of " />
+            <Button fx:id="exit_btn" layoutX="561.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="@../../../other_useful_resources/buttons.css" text="X" />
             <Line endX="293.0" layoutX="314.0" layoutY="79.0" startX="-304.0" stroke="#f71735" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-44.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/logo.png" />
+                  <Image url="@../../../other_useful_resources/logo.png" />
                </image>
             </ImageView>
-            <Label layoutX="42.0" layoutY="128.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="computational complexity so far. You will be able to see the" />
-            <Label layoutX="42.0" layoutY="158.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="correct answers as you go on." />
-            <Label layoutX="42.0" layoutY="230.0" prefHeight="46.0" prefWidth="537.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="When faced with a problem known to be NP-complete, the best" />
-            <Label layoutX="42.0" layoutY="260.0" prefHeight="46.0" prefWidth="537.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="approach to solving the problem is to..." />
-            <RadioButton fx:id="ck1" layoutX="42.0" layoutY="315.0" mnemonicParsing="false" onAction="#clicked_1" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Design a polynomial-time algorithm for solving all its instances">
+            <Label layoutX="42.0" layoutY="128.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="@../../../other_useful_resources/labels.css" text="computational complexity so far. You will be able to see the" />
+            <Label layoutX="42.0" layoutY="158.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="@../../../other_useful_resources/labels.css" text="correct answers as you go on." />
+            <Label layoutX="42.0" layoutY="230.0" prefHeight="46.0" prefWidth="537.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="When faced with a problem known to be NP-complete, the best" />
+            <Label layoutX="42.0" layoutY="260.0" prefHeight="46.0" prefWidth="537.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="approach to solving the problem is to..." />
+            <RadioButton fx:id="ck1" layoutX="42.0" layoutY="315.0" mnemonicParsing="false" onAction="#clicked_1" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="Design a polynomial-time algorithm for solving all its instances">
                <toggleGroup>
                   <ToggleGroup fx:id="blue" />
                </toggleGroup></RadioButton>
-            <RadioButton fx:id="ck2" layoutX="42.0" layoutY="354.0" mnemonicParsing="false" onAction="#clicked_2" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Use an approach that alleviates the intractability of the problem" toggleGroup="$blue" />
-            <RadioButton fx:id="ck3" layoutX="42.0" layoutY="395.0" mnemonicParsing="false" onAction="#clicked_3" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Don't bother solving it" toggleGroup="$blue" />
-            <Button fx:id="next_btn1" layoutX="102.0" layoutY="461.0" mnemonicParsing="false" onAction="#goto_exercise_four" prefHeight="20.0" prefWidth="72.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Back" />
-            <Label fx:id="ans" layoutX="62.0" layoutY="422.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" />
-            <Label layoutX="258.0" layoutY="19.0" prefHeight="46.0" prefWidth="106.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Exercise 5" />
-            <Button fx:id="next_btn11" layoutX="432.0" layoutY="461.0" mnemonicParsing="false" onAction="#finish" prefHeight="20.0" prefWidth="72.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Done" />
+            <RadioButton fx:id="ck2" layoutX="42.0" layoutY="354.0" mnemonicParsing="false" onAction="#clicked_2" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="Use an approach that alleviates the intractability of the problem" toggleGroup="$blue" />
+            <RadioButton fx:id="ck3" layoutX="42.0" layoutY="395.0" mnemonicParsing="false" onAction="#clicked_3" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="Don't bother solving it" toggleGroup="$blue" />
+            <Button fx:id="next_btn1" layoutX="102.0" layoutY="461.0" mnemonicParsing="false" onAction="#goto_exercise_four" prefHeight="20.0" prefWidth="72.0" stylesheets="@../../../other_useful_resources/buttons.css" text="Back" />
+            <Label fx:id="ans" layoutX="62.0" layoutY="422.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="@../../../other_useful_resources/labels.css" />
+            <Label layoutX="258.0" layoutY="19.0" prefHeight="46.0" prefWidth="106.0" styleClass="labels" stylesheets="@../../../other_useful_resources/labels.css" text="Exercise 5" />
+            <Button fx:id="next_btn11" layoutX="432.0" layoutY="461.0" mnemonicParsing="false" onAction="#finish" prefHeight="20.0" prefWidth="72.0" stylesheets="@../../../other_useful_resources/buttons.css" text="Done" />
          </children>
       </AnchorPane>
    </children>

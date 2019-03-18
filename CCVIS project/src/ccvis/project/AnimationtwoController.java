@@ -7,10 +7,12 @@
 package ccvis.project;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import static java.lang.Math.random;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -417,8 +419,10 @@ public class AnimationtwoController implements Initializable {
         
        
       Image image;
-      image = new Image(new FileInputStream("C:\\Users\\Immanuella Duke\\OneDrive - Ashesi University\\Documents\\NetBeansProjects\\CCVIS project\\other_useful_resources\\knapsack.png"));
-      
+  String imageLocation = "/other_useful_resources/knapsack.png";
+
+      image = new Image(this.getClass().getResourceAsStream(imageLocation));
+   
       //Setting the image view 
       ImageView imageView = new ImageView(image); 
       
@@ -562,27 +566,23 @@ public class AnimationtwoController implements Initializable {
 
       //put the right gold bars on the right side of the knapsack
       for (int i = 0; i < weight_list.length; i++){
-                     try {
-                         Image gold;
-                         gold = new Image(new FileInputStream("C:\\Users\\Immanuella Duke\\OneDrive - Ashesi University\\Documents\\NetBeansProjects\\CCVIS project\\other_useful_resources\\gold.png"));
-                         //Setting the image view
-                         ImageView goldview = new ImageView(gold);
-                         //Setting the position of the gold bar
-                         goldview.setX(gold_rightx);
-                         goldy_rightheight = goldy_rightheight + 60;
-                         goldview.setY(goldy_rightheight);
-                         goldview.setPreserveRatio(true);
-                         root.getChildren().add(goldview);
-                         
-                         Label n = new Label(Integer.toString(weight_list[i]) + "g\t\t\t$"+ Integer.toString(values_list[i]));
-                         n.setLayoutX(text_rightx);
-                         texty_rightheight = texty_rightheight + 60;
-                         n.setLayoutY(texty_rightheight );
-                         n.setStyle("-fx-font: 22 Garamond; -fx-text-fill: #fdfffc; ");
-                         root.getChildren().add(n);
-                     } catch (FileNotFoundException ex) {
-                         Logger.getLogger(AnimationtwoController.class.getName()).log(Level.SEVERE, null, ex);
-                     }
+          Image gold;
+          String goldLocation = "/other_useful_resources/gold.png";
+          gold = new Image(this.getClass().getResourceAsStream(goldLocation));
+          //Setting the image view
+          ImageView goldview = new ImageView(gold);
+          //Setting the position of the gold bar
+          goldview.setX(gold_rightx);
+          goldy_rightheight = goldy_rightheight + 60;
+          goldview.setY(goldy_rightheight);
+          goldview.setPreserveRatio(true);
+          root.getChildren().add(goldview);
+          Label n = new Label(Integer.toString(weight_list[i]) + "g\t\t\t$"+ Integer.toString(values_list[i]));
+          n.setLayoutX(text_rightx);
+          texty_rightheight = texty_rightheight + 60;
+          n.setLayoutY(texty_rightheight );
+          n.setStyle("-fx-font: 22 Garamond; -fx-text-fill: #fdfffc; ");
+          root.getChildren().add(n);
       
       }
       System.out.println("works till here 5");
@@ -611,8 +611,8 @@ public class AnimationtwoController implements Initializable {
       //put the gold bars on the left side of the knapsack...animate the left side.
       for (int i = 0; i < weights.length; i++){
         Image gold;
-        gold = new Image(new FileInputStream("C:\\Users\\Immanuella Duke\\OneDrive - Ashesi University\\Documents\\NetBeansProjects\\CCVIS project\\other_useful_resources\\gold.png"));
-        //Setting the image view 
+       String goldLocation = "/other_useful_resources/gold.png";
+          gold = new Image(this.getClass().getResourceAsStream(goldLocation));
         ImageView goldview = new ImageView(gold); 
         //Setting the position of the gold bar 
         goldview.setX(goldx_width); 

@@ -12,9 +12,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ccvis.project.AnimationtwoController">
    <children>
-      <AnchorPane id="AnchorPane" prefWidth="620.0" styleClass="anchorpane_anim" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/anchorpane.css">
+      <AnchorPane id="AnchorPane" prefWidth="620.0" styleClass="anchorpane_anim" stylesheets="@../../../other_useful_resources/anchorpane.css">
          <children>
-            <MenuBar id="menubar_anim" fx:id="menu_bar" layoutX="103.0" layoutY="20.0" prefHeight="52.0" prefWidth="455.0" styleClass="menubar_anim" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/menubar.css">
+            <MenuBar id="menubar_anim" fx:id="menu_bar" layoutX="103.0" layoutY="20.0" prefHeight="52.0" prefWidth="455.0" styleClass="menubar_anim" stylesheets="@../../../other_useful_resources/menubar.css">
                <menus>
                   <Menu mnemonicParsing="false" style="-fx-border-color: #011627; -fx-background-color: #f71735;" styleClass="menuitem_anim" text="Introduction">
                      <items>
@@ -43,25 +43,25 @@
                   </Menu>
                </menus>
             </MenuBar>
-            <Label layoutX="231.0" layoutY="58.0" prefHeight="52.0" prefWidth="200.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="0-1 Knapsack Problem" />
-            <Button fx:id="intro_two_next_btn" layoutX="501.0" layoutY="451.0" mnemonicParsing="false" onAction="#goto_preduc" prefHeight="37.0" prefWidth="78.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Done" />
-            <Button fx:id="exit_btn" layoutX="561.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="X" />
+            <Label layoutX="231.0" layoutY="58.0" prefHeight="52.0" prefWidth="200.0" styleClass="labels" stylesheets="@../../../other_useful_resources/labels.css" text="0-1 Knapsack Problem" />
+            <Button fx:id="intro_two_next_btn" layoutX="501.0" layoutY="451.0" mnemonicParsing="false" onAction="#goto_preduc" prefHeight="37.0" prefWidth="78.0" stylesheets="@../../../other_useful_resources/buttons.css" text="Done" />
+            <Button fx:id="exit_btn" layoutX="561.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="@../../../other_useful_resources/buttons.css" text="X" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-44.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/logo.png" />
+                  <Image url="@../../../other_useful_resources/logo.png" />
                </image>
             </ImageView>
             <Line endX="293.0" layoutX="318.0" layoutY="296.0" startX="-304.0" stroke="#f71735" />
-            <Button fx:id="intro_two_back_btn1" layoutX="76.0" layoutY="451.0" mnemonicParsing="false" onAction="#goto_pproblem" prefHeight="37.0" prefWidth="60.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Back" />
-            <Button fx:id="see_anim" layoutX="246.0" layoutY="451.0" mnemonicParsing="false" onAction="#animate_knapsack" prefHeight="37.0" prefWidth="135.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="See Animation" />
-            <Label layoutX="38.0" layoutY="97.0" prefHeight="52.0" prefWidth="541.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Given weights and values of n items, put these items in knapsack of" />
-            <Label layoutX="38.0" layoutY="132.0" prefHeight="52.0" prefWidth="541.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="capacity W to get the maximum total value in the knapsack. The two" />
-            <Label layoutX="38.0" layoutY="171.0" prefHeight="52.0" prefWidth="541.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="integer arrays: val[0..n-1] and wt[0..n-1] represent values and weights" />
-            <Label layoutX="36.0" layoutY="207.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="associated with n items respectively. Also given an integer W which " />
-            <Label layoutX="36.0" layoutY="244.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="represents knapsack capacity, find out the maximum value subset of" />
-            <Label layoutX="31.0" layoutY="282.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text=" val[] such that sum of the weights of this subset is smaller than or " />
-            <Label layoutX="36.0" layoutY="321.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="equal to W. You cannot break an item, either pick the complete item," />
-            <Label layoutX="34.0" layoutY="355.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="or don’t pick it (0-1 property)." />
+            <Button fx:id="intro_two_back_btn1" layoutX="76.0" layoutY="451.0" mnemonicParsing="false" onAction="#goto_pproblem" prefHeight="37.0" prefWidth="60.0" stylesheets="@../../../other_useful_resources/buttons.css" text="Back" />
+            <Button fx:id="see_anim" layoutX="246.0" layoutY="451.0" mnemonicParsing="false" onAction="#animate_knapsack" prefHeight="37.0" prefWidth="135.0" stylesheets="@../../../other_useful_resources/buttons.css" text="See Animation" />
+            <Label layoutX="38.0" layoutY="97.0" prefHeight="52.0" prefWidth="541.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="Given weights and values of n items, put these items in knapsack of" />
+            <Label layoutX="38.0" layoutY="132.0" prefHeight="52.0" prefWidth="541.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="capacity W to get the maximum total value in the knapsack. The two" />
+            <Label layoutX="38.0" layoutY="171.0" prefHeight="52.0" prefWidth="541.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="integer arrays: val[0..n-1] and wt[0..n-1] represent values and weights" />
+            <Label layoutX="36.0" layoutY="207.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="associated with n items respectively. Also given an integer W which " />
+            <Label layoutX="36.0" layoutY="244.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="represents knapsack capacity, find out the maximum value subset of" />
+            <Label layoutX="31.0" layoutY="282.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text=" val[] such that sum of the weights of this subset is smaller than or " />
+            <Label layoutX="36.0" layoutY="321.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="equal to W. You cannot break an item, either pick the complete item," />
+            <Label layoutX="34.0" layoutY="355.0" prefHeight="52.0" prefWidth="556.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="or don’t pick it (0-1 property)." />
          </children>
       </AnchorPane>
    </children>

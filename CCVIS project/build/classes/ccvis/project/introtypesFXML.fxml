@@ -12,9 +12,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ccvis.project.IntrotypesController">
    <children>
-      <AnchorPane id="AnchorPane" prefWidth="620.0" styleClass="anchorpane" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/anchorpane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane id="AnchorPane" prefWidth="620.0" styleClass="anchorpane" stylesheets="@../../../other_useful_resources/anchorpane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <MenuBar id="menubar" fx:id="menu_bar" layoutX="103.0" layoutY="20.0" prefHeight="52.0" prefWidth="455.0" style="-fx-border-width: 2px;" styleClass="menubar" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/menubar.css">
+            <MenuBar id="menubar" fx:id="menu_bar" layoutX="106.0" layoutY="20.0" prefHeight="52.0" prefWidth="455.0" style="-fx-border-width: 2px;" styleClass="menubar" stylesheets="@../../../other_useful_resources/menubar.css">
                <menus>
                   <Menu mnemonicParsing="false" style="-fx-border-color: #011627;" text="Introduction">
                      <items>
@@ -44,28 +44,28 @@
                </menus>
             </MenuBar>
             <Label layoutX="224.0" layoutY="83.0" prefHeight="52.0" prefWidth="176.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Types of complexity" />
-            <Button fx:id="types_next_btn" layoutX="501.0" layoutY="523.0" mnemonicParsing="false" onAction="#goto_animation_one" prefHeight="37.0" prefWidth="60.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Next" />
-            <Button fx:id="exit_btn" layoutX="561.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="X" />
-            <Label layoutX="39.0" layoutY="169.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="problems can be solved in polynomial time by deterministic algorithms" />
+            <Button fx:id="types_next_btn" layoutX="501.0" layoutY="523.0" mnemonicParsing="false" onAction="#goto_animation_one" prefHeight="37.0" prefWidth="60.0" stylesheets="@../../../other_useful_resources/buttons.css" text="Next" />
+            <Button fx:id="exit_btn" layoutX="561.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="@../../../other_useful_resources/buttons.css" text="X" />
+            <Label layoutX="39.0" layoutY="169.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="problems can be solved in polynomial time by deterministic algorithms" />
             <Line endX="293.0" layoutX="318.0" layoutY="83.0" startX="-304.0" stroke="#f71735" />
-            <Label layoutX="35.0" layoutY="203.0" onMousePressed="#goto_pproblem" prefHeight="37.0" prefWidth="242.0" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Example: m-coloring problem" />
-            <Label layoutX="35.0" layoutY="250.0" prefHeight="34.0" prefWidth="540.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="NP-problem: This is a class of problems that can be solved in non-" />
+            <Label layoutX="35.0" layoutY="203.0" onMousePressed="#goto_pproblem" prefHeight="37.0" prefWidth="242.0" styleClass="smalllabelscat" stylesheets="@../../../other_useful_resources/labels.css" text="Example: m-coloring problem" />
+            <Label layoutX="35.0" layoutY="250.0" prefHeight="34.0" prefWidth="540.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="NP-problem: This is a class of problems that can be solved in non-" />
             <Label alignment="CENTER" layoutX="35.0" layoutY="352.0" prefHeight="34.0" prefWidth="283.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="the time efficiency is polynomial." />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-44.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/logo.png" />
+                  <Image url="@../../../other_useful_resources/logo.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="35.0" layoutY="284.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="deterministic polynomial time. An NP algorithm solves a problem if for" />
-            <Label alignment="CENTER" layoutX="35.0" layoutY="318.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="every yes instance of the problem it returns yes on some execution; and" />
+            <Label alignment="CENTER" layoutX="35.0" layoutY="284.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="deterministic polynomial time. An NP algorithm solves a problem if for" />
+            <Label alignment="CENTER" layoutX="35.0" layoutY="318.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="every yes instance of the problem it returns yes on some execution; and" />
             <Line endX="293.0" layoutX="317.0" layoutY="240.0" startX="-304.0" stroke="#f71735" />
-            <Label layoutX="39.0" layoutY="135.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="P-problem: These are decision problems (with yes/no answers). These" />
+            <Label layoutX="39.0" layoutY="135.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="P-problem: These are decision problems (with yes/no answers). These" />
             <Line endX="293.0" layoutX="317.0" layoutY="387.0" startX="-304.0" stroke="#f71735" />
-            <Button fx:id="types_back_btn1" layoutX="56.0" layoutY="523.0" mnemonicParsing="false" onAction="#goto_intro_intro" prefHeight="37.0" prefWidth="60.0" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/buttons.css" text="Back" />
-            <Label alignment="CENTER" layoutX="35.0" layoutY="387.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="NP-Complete problems: This is an NP problem that is as difficult as any" />
-            <Label alignment="CENTER" layoutX="35.0" layoutY="421.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="other problem in this class because other NP problem can be reduced to" />
-            <Label alignment="CENTER" layoutX="35.0" layoutY="455.0" prefHeight="34.0" prefWidth="540.0" styleClass="smalllabels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="it in polynomial time. Example: 3-CNF satisfiability problem" />
-            <Label alignment="CENTER" layoutX="297.0" layoutY="352.0" onMousePressed="#goto_npproblem" prefHeight="34.0" prefWidth="242.0" styleClass="smalllabelscat" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text=" Example: knapsack problem" />
+            <Button fx:id="types_back_btn1" layoutX="56.0" layoutY="523.0" mnemonicParsing="false" onAction="#goto_intro_intro" prefHeight="37.0" prefWidth="60.0" stylesheets="@../../../other_useful_resources/buttons.css" text="Back" />
+            <Label alignment="CENTER" layoutX="35.0" layoutY="387.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="NP-Complete problems: This is an NP problem that is as difficult as any" />
+            <Label alignment="CENTER" layoutX="35.0" layoutY="421.0" prefHeight="34.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="other problem in this class because other NP problem can be reduced to" />
+            <Label alignment="CENTER" layoutX="35.0" layoutY="455.0" prefHeight="34.0" prefWidth="540.0" styleClass="smalllabels" stylesheets="@../../../other_useful_resources/labels.css" text="it in polynomial time. Example: 3-CNF satisfiability problem" />
+            <Label alignment="CENTER" layoutX="297.0" layoutY="352.0" prefHeight="34.0" prefWidth="242.0" styleClass="smalllabelscat" stylesheets="@../../../other_useful_resources/labels.css" text=" Example: knapsack problem" />
          </children>
       </AnchorPane>
    </children>
