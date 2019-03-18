@@ -126,14 +126,15 @@ public class AnimationoneController implements Initializable {
  
                 //10 vertices, 3 colors
                 int V = 10;
-                int m = 3;
+                int m = 4;
                 int [] colored_v = new int [V];
                 int [][] graph = generate_graph(V);
               
                 boolean result = graph_colouring(graph, m, V, colored_v);
-               // System.out.println("For vertex "+ V + " and m of "+ m + "\n");
-                System.out.println(result);
-                //return vertandm
+                while (result==false){
+                   graph = generate_graph(V);
+                   result = graph_colouring(graph, m, V, colored_v);
+                }
         }
         else if (randomNum == 2){
                 //3 vertices, 2 colors ...//impossible to color the graph
@@ -144,9 +145,10 @@ public class AnimationoneController implements Initializable {
                 
                 
                 boolean result2 = graph_colouring(graph_two, m2, V2, colored_v_two);
-                //System.out.println("For vertex "+ V2 + " and m of "+ m2 + "\n");
-                System.out.println(result2);
-                //return vertandm;
+                while (result2==false){
+                   graph_two = generate_graph(V2);
+                   result2 = graph_colouring(graph_two, m2, V2, colored_v_two);
+                }
                 
         }
         else if (randomNum == 3){
@@ -155,11 +157,15 @@ public class AnimationoneController implements Initializable {
                 int m3 = 3;
                 int [] colored_v_three = new int [V3];
                 int [][] graph_three  = generate_graph(V3);
-               
+                
                
                 boolean result3 = graph_colouring(graph_three, m3, V3, colored_v_three);
-                //System.out.println("For vertex "+ V3 + " and m of "+ m3 + "\n");
-                System.out.println(result3);
+                while (result3 == false){
+                    graph_three  = generate_graph(V3);
+                    result3 = graph_colouring(graph_three, m3, V3, colored_v_three);
+                    
+                }
+                
         }
                 //return vertandm;      
     }
@@ -262,6 +268,7 @@ public class AnimationoneController implements Initializable {
             
             return false;
         }
+
         //print out colors used to color graph.
         for (int i = 0; i < colored_v.length; i++){
             System.out.println("colour of vertex " + i + " is " + colored_v[i]);
@@ -365,7 +372,7 @@ public class AnimationoneController implements Initializable {
             
             //label
             Label nte = makeLabel("Notice that no two vertices with the same color are connected", 50,50);
-            Label nte1 = makeLabel("Click the check button to see how the graph is colored", 90,80);
+            Label nte1 = makeLabel("Click the check button to see how the graph is colored; vertex: " + V + " m of " + m, 90,80);
             //create back btn for 
             Button back = new Button("Back");
             back.setStyle("-fx-font: 18 Garamond; -fx-background-color: #011627; -fx-text-fill: #fdfffc; ");
@@ -394,13 +401,40 @@ public class AnimationoneController implements Initializable {
                 
             }
         });
+              /*
+            ///for if there is no solution
+            if (!graph_colouring_helper(0,V, g, colored_v, m)){
+                System.out.println("no solution for v of " + V + "and m of " + m);
+                return false;
+              
+                System.out.println("no solution for v of " + V + "and m of " + m);
+                Label l = makeLabel("There is no solution for this graph: v of " + V + "and m of " + m, 100,100);
+                //Stage stager = (Stage) see_new.getScene().getWindow();
+                //stager.close();
+                //have a try again button
+                Button try_again = new Button("Try Again");
+                try_again.setStyle("-fx-font: 18 Garamond; -fx-background-color: #011627; -fx-text-fill: #fdfffc; ");
+                try_again.setLayoutX(0);
+                try_again.setLayoutY(150);   
+                root.getChildren().add(try_again);
+                try_again.setOnAction(new EventHandler<ActionEvent>() {
+            
+              public void handle(ActionEvent event) {
+                Stage stager = (Stage) see_new.getScene().getWindow();
+                stager.close();
+                play_vert_and_m(event);
+                
+            }
+        });
+        }*/
+            
             Scene scenea = new Scene(root, width, height);  
             scenea.setFill(bgc);
             //Adding scene to the stage 
             stagea.setScene(scenea); 
 
             //Displaying the contents of the stage 
-            stagea.show();       
+            stagea.show();   
             back.setOnAction(new EventHandler<ActionEvent>() {
             
             public void handle(ActionEvent event) {

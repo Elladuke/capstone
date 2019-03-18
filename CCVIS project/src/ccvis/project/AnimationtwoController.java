@@ -654,11 +654,8 @@ public class AnimationtwoController implements Initializable {
                 
             }
         });
-      System.out.println("works till here 8");
-      System.out.println("stage a:"+ stagea + "see scene"+ scene);
+      
     //Setting title to the Stage 
-    //if (stagea == null){}
-    
   
     stagea.setTitle("Knapsack Problem");  
       
