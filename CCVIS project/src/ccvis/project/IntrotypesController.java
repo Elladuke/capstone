@@ -15,9 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -30,23 +27,11 @@ import javafx.stage.Stage;
 public class IntrotypesController implements Initializable {
 
     @FXML
-    private MenuBar menu_bar;
-    @FXML
-    private Menu menu_animation;
-    @FXML
-    private Menu menu_reduction;
-    @FXML
-    private Menu menu_exercise;
-    @FXML
     private Button types_next_btn;
     @FXML
     private Button exit_btn;
     @FXML
     private Button types_back_btn1;
-    @FXML
-    private MenuItem types_id;
-    @FXML
-    private MenuItem comp_id;
 
     /**
      * Initializes the controller class.
@@ -57,19 +42,19 @@ public class IntrotypesController implements Initializable {
     }    
 
     @FXML
-    private void goto_animation_one(ActionEvent event) throws IOException {
-          //close current stage
-       Stage stagea = (Stage) exit_btn.getScene().getWindow();
+    private void goto_bigidea_pprob(ActionEvent event) throws IOException {
+        Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
     //open the next stage - introintrofxml
         FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("Animationone.fxml"));
+        FXMLLoader(getClass().getResource("BigIdea_pproblemFXML.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
+        
         Stage stage = new Stage();
         //set what you want on your stage
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("P-problem animation");
+        stage.setTitle("Understanding P complexity");
         stage.setScene(new Scene(root1));
         stage.setResizable(false);
         stage.show();
@@ -77,20 +62,39 @@ public class IntrotypesController implements Initializable {
 
     @FXML
     private void exit(ActionEvent event) {
+         Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+    }
+
+    @FXML
+    private void goto_pproblem(MouseEvent event) throws IOException {
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
-        stagea.close();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("AnimationOne.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("M-Coloring Animation");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
     private void goto_intro_intro(ActionEvent event) throws IOException {
-            //close current stage
-       Stage stagea = (Stage) exit_btn.getScene().getWindow();
+        Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
     //open the next stage - introintrofxml
         FXMLLoader fxmlLoader = new 
         FXMLLoader(getClass().getResource("IntrointroFXML.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
+        
         Stage stage = new Stage();
         //set what you want on your stage
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -101,44 +105,7 @@ public class IntrotypesController implements Initializable {
     }
 
     @FXML
-    private void goto_welcome(ActionEvent event) throws IOException {
-        Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("IntroPageFXML.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("CCVisu Visualization system");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
-
-    @FXML
-    private void goto_pproblem(ActionEvent event) throws IOException {
-         //close current stage
-       Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("Animationone.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("P-problem animation");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
-
-    @FXML
-    private void goto_npproblem(ActionEvent event) throws IOException {
+    private void goto_npproblem(MouseEvent event) throws IOException {
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -146,125 +113,14 @@ public class IntrotypesController implements Initializable {
         FXMLLoader fxmlLoader = new 
         FXMLLoader(getClass().getResource("Animationtwo.fxml"));
         Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("NP-problem animation");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
-
-    @FXML
-    private void goto_pproblemreduc(ActionEvent event) throws IOException {
-         Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("PReduction.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("P-problem Reduction");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
- 
-    @FXML
-    private void goto_npproblemreduc(ActionEvent event) throws IOException {
-        Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("NPReduction.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("NP-problem Reduction");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
-
-    @FXML
-    private void goto_catcomp(ActionEvent event) throws IOException {
-         Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("CategorizeCompFXML.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Categorize Complexity problem");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
-
-    @FXML
-    private void goto_exercise(ActionEvent event) throws IOException {
         
-         Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("ExerciseOneFXML.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         //set what you want on your stage
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Computational complexity exercises");
+        stage.setTitle("Knapsack Problem");
         stage.setScene(new Scene(root1));
         stage.setResizable(false);
         stage.show();
     }
-
-    @FXML
-    private void goto_pproblem(MouseEvent event) throws IOException {
-         //close current stage
-       Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("Animationone.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("P-problem animation");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
-
-    @FXML
-    private void goto_npproblem(MouseEvent event) throws  IOException {
-        Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("Animationtwo.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("NP-problem animation");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
-
-
-   
+    
 }

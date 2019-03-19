@@ -18,7 +18,15 @@
               <items>
                 <MenuItem mnemonicParsing="false" styleClass="menuitem" text="Welcome" />
               <MenuItem fx:id="comp_id" mnemonicParsing="false" onAction="#goto_intro_intro" styleClass="menuitem" text="Computational Complexity" />
-                  <MenuItem fx:id="types_ID" mnemonicParsing="false" onAction="#goto_types" styleClass="menuitem" text="Types of complexity" />
+                  <Menu mnemonicParsing="false" styleClass="menuitem" text="Types of complexities">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#goto_bigidea_pprob" styleClass="menuitem" text="Big Idea: P problem" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_bigidea_npprob" styleClass="menuitem" text="Big Idea: NP problem" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_bigidea_npcomp" styleClass="menuitem" text="Big Idea: NP Complete" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_bigidea_nphard" styleClass="menuitem" text="Big Idea: NP Hard" />
+                        <MenuItem mnemonicParsing="false" onAction="#goto_bigidea_euler" styleClass="menuitem" text="Big Idea: Euler's Diagram" />
+                    </items>
+                  </Menu>
               </items>
             </Menu>
           <Menu fx:id="menu_animation" mnemonicParsing="false" style="-fx-border-color: #011627; -fx-border-top: 0px;" styleClass="menu" text="Animations">

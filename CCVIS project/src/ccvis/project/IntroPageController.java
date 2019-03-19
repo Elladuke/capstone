@@ -43,8 +43,6 @@ public class IntroPageController implements Initializable {
     @FXML
     private MenuItem comp_id;
     @FXML
-    private MenuItem types_ID;
-    @FXML
     private MenuItem exercise_menu_itm;
 
     /**
@@ -84,7 +82,6 @@ public class IntroPageController implements Initializable {
 
    
 
-    @FXML
     private void goto_types(ActionEvent event) throws IOException {
          Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
@@ -208,6 +205,101 @@ public class IntroPageController implements Initializable {
         //set what you want on your stage
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle("NP-problem Reduction");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    @FXML
+    private void goto_bigidea_pprob(ActionEvent event) throws IOException {
+        Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("BigIdea_pproblemFXML.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Understanding P complexity");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    @FXML
+    private void goto_bigidea_npprob(ActionEvent event) throws IOException {
+         Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("BIgIdea_npproblemFXML.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load( );
+        
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Understanding NP complexity");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    @FXML
+    private void goto_bigidea_npcomp(ActionEvent event) throws IOException {
+           Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("BigIdea_npcompleteFXML.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Understanding NP-complete complexity");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    @FXML
+    private void goto_bigidea_nphard(ActionEvent event) throws IOException {
+            Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("BigIdea_nphardFXML.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load( );
+        
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Understanding NP-hard complexity");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    @FXML
+    private void goto_bigidea_euler(ActionEvent event) throws IOException {
+         Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("BigIdea_illustrationsFXML.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Euler's Diagram");
         stage.setScene(new Scene(root1));
         stage.setResizable(false);
         stage.show();
