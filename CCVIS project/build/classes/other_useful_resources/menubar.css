@@ -7,7 +7,7 @@
 
 }
 .menubar_anim{
-   -fx-background-color: #f71735; 
+   -fx-background-color: #f71735;
    -fx-text-fill: #011627; 
    -fx-font-family: Garamond;
    -fx-font-size: 18px;
@@ -21,7 +21,7 @@
    -fx-font-size: 18px;
 }
 .menu_anim{
-   -fx-background-color: #f71735; 
+   -fx-background-color: #f71735;
    -fx-text-fill: #011627; 
    -fx-font-family: Garamond;
    -fx-font-size: 18px;
