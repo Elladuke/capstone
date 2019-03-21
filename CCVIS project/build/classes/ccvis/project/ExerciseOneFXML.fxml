@@ -25,12 +25,12 @@
             <Label layoutX="42.0" layoutY="128.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="@other_useful_resources/labels.css" text="to test your undertanding of computational complexity so far." />
             <Label layoutX="42.0" layoutY="158.0" prefHeight="46.0" prefWidth="537.0" styleClass="labels" stylesheets="@other_useful_resources/labels.css" text="You will be able to see the correct answers as you go on." />
             <Label layoutX="265.0" layoutY="19.0" prefHeight="46.0" prefWidth="90.0" styleClass="labels" stylesheets="@other_useful_resources/labels.css" text="Exercise 1" />
-            <Label layoutX="42.0" layoutY="230.0" prefHeight="46.0" prefWidth="537.0" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="Which of the following is not a known NP problem?" />
+            <Label layoutX="42.0" layoutY="230.0" prefHeight="46.0" prefWidth="537.0" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="Which of the following problems is proven to have no solution?" />
             <RadioButton fx:id="rb2" layoutX="42.0" layoutY="323.0" mnemonicParsing="false" onAction="#clicked_rb2" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="Hamiltonian circuit problem">
                <toggleGroup>
                   <ToggleGroup fx:id="red" />
                </toggleGroup></RadioButton>
-            <RadioButton fx:id="rb4" layoutX="42.0" layoutY="392.0" mnemonicParsing="false" onAction="#clicked_rb4" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="M-coloring problem" toggleGroup="$red" />
+            <RadioButton fx:id="rb4" layoutX="42.0" layoutY="392.0" mnemonicParsing="false" onAction="#clicked_rb4" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="Halting problem" toggleGroup="$red" />
             <RadioButton fx:id="rb3" layoutX="42.0" layoutY="357.0" mnemonicParsing="false" onAction="#clicked_rb3" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="Knapsack problem" toggleGroup="$red" />
             <RadioButton fx:id="rb1" layoutX="42.0" layoutY="289.0" mnemonicParsing="false" onAction="#clicked_rb1" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="Travelling salesman problem" toggleGroup="$red" />
             <Label fx:id="ans1" layoutX="309.0" layoutY="334.0" prefHeight="46.0" prefWidth="287.0" styleClass="labels" stylesheets="@other_useful_resources/labels.css" />

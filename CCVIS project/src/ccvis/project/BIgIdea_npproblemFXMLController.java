@@ -69,8 +69,22 @@ public class BIgIdea_npproblemFXMLController implements Initializable {
      
     }
 
-    @FXML
-    private void goto_pproblem(MouseEvent event) {
+    private void goto_pproblem(MouseEvent event) throws IOException {
+        //close current stage
+       Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("Animationone.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("P-problem animation");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
@@ -87,6 +101,24 @@ public class BIgIdea_npproblemFXMLController implements Initializable {
         //set what you want on your stage
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle("Understanding P complexity");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    @FXML
+    private void goto_animtwo(MouseEvent event) throws IOException {
+         Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("Animationtwo.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("NP-problem animation");
         stage.setScene(new Scene(root1));
         stage.setResizable(false);
         stage.show();

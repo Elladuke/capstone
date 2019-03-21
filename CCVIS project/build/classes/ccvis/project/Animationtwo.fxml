@@ -52,16 +52,16 @@
                </menus>
             </MenuBar>
             <Label layoutX="231.0" layoutY="58.0" prefHeight="52.0" prefWidth="200.0" styleClass="labels" stylesheets="@other_useful_resources/labels.css" text="0-1 Knapsack Problem" />
-            <Button fx:id="intro_two_next_btn" layoutX="501.0" layoutY="451.0" mnemonicParsing="false" onAction="#goto_preduc" prefHeight="37.0" prefWidth="78.0" stylesheets="@other_useful_resources/buttons.css" text="Done" />
-            <Button fx:id="exit_btn" layoutX="561.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" stylesheets="@other_useful_resources/buttons.css" text="X" />
+            <Button fx:id="intro_two_next_btn" layoutX="501.0" layoutY="451.0" mnemonicParsing="false" onAction="#goto_preduc" prefHeight="37.0" prefWidth="78.0" styleClass="button_anim" stylesheets="@other_useful_resources/buttons.css" text="Done" />
+            <Button fx:id="exit_btn" layoutX="564.0" layoutY="20.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exit" styleClass="smallbutton_anim" stylesheets="@other_useful_resources/buttons.css" text="X" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-44.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@other_useful_resources/logo.png" />
                </image>
             </ImageView>
             <Line endX="293.0" layoutX="318.0" layoutY="296.0" startX="-304.0" stroke="#f71735" />
-            <Button fx:id="intro_two_back_btn1" layoutX="76.0" layoutY="451.0" mnemonicParsing="false" onAction="#goto_pproblem" prefHeight="37.0" prefWidth="60.0" stylesheets="@other_useful_resources/buttons.css" text="Back" />
-            <Button fx:id="see_anim" layoutX="246.0" layoutY="451.0" mnemonicParsing="false" onAction="#animate_knapsack" prefHeight="37.0" prefWidth="135.0" stylesheets="@other_useful_resources/buttons.css" text="See Animation" />
+            <Button fx:id="intro_two_back_btn1" layoutX="76.0" layoutY="451.0" mnemonicParsing="false" onAction="#goto_pproblem" prefHeight="37.0" prefWidth="60.0" styleClass="button_anim" stylesheets="@other_useful_resources/buttons.css" text="Back" />
+            <Button fx:id="see_anim" layoutX="246.0" layoutY="451.0" mnemonicParsing="false" onAction="#animate_knapsack" prefHeight="37.0" prefWidth="135.0" styleClass="button_anim" stylesheets="@other_useful_resources/buttons.css" text="See Animation" />
             <Label layoutX="38.0" layoutY="97.0" prefHeight="52.0" prefWidth="541.0" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="Given weights and values of n items, put these items in knapsack of" />
             <Label layoutX="38.0" layoutY="132.0" prefHeight="52.0" prefWidth="541.0" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="capacity W to get the maximum total value in the knapsack. The two" />
             <Label layoutX="38.0" layoutY="171.0" prefHeight="52.0" prefWidth="541.0" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="integer arrays: val[0..n-1] and wt[0..n-1] represent values and weights" />
