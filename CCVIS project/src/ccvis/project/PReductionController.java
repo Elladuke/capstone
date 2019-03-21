@@ -274,6 +274,8 @@ public class PReductionController implements Initializable {
     
     @FXML
     private void goto_welcome(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -292,6 +294,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_introintro(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     //close current stage
        Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
@@ -310,6 +314,8 @@ public class PReductionController implements Initializable {
     }
 
     private void goto_intro_types(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -328,6 +334,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_pproblem(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     //close current stage
        Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
@@ -347,6 +355,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_npproblem(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -365,6 +375,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_npreduc(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -383,6 +395,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_catcomp(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -401,6 +415,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_exercise(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -421,6 +437,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void exit(ActionEvent event) {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
     }
@@ -448,6 +466,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_bigidea_pprob(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -467,6 +487,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_bigidea_npprob(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -486,6 +508,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_bigidea_npcomp(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -505,6 +529,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_bigidea_nphard(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -524,6 +550,8 @@ public class PReductionController implements Initializable {
 
     @FXML
     private void goto_bigidea_euler(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
          Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      

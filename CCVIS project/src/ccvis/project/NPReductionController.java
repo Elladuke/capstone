@@ -70,6 +70,8 @@ public class NPReductionController implements Initializable {
 
     @FXML
     private void goto_welcome(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -88,6 +90,8 @@ public class NPReductionController implements Initializable {
 
     @FXML
     private void goto_introintro(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     //close current stage
        Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
@@ -106,6 +110,8 @@ public class NPReductionController implements Initializable {
     }
 
     private void goto_intro_types(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -124,6 +130,8 @@ public class NPReductionController implements Initializable {
 
     @FXML
     private void goto_pproblem(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     //close current stage
        Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
@@ -143,6 +151,8 @@ public class NPReductionController implements Initializable {
 
     @FXML
     private void goto_npproblem(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
     Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -160,26 +170,12 @@ public class NPReductionController implements Initializable {
     }
 
 
-    @FXML
-    private void goto_catcomp(ActionEvent event) throws IOException {
-    Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("CategorizeCompFXML.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Categorize Complexity problem");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
+    
 
     @FXML
     private void goto_exercise(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
      Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -204,27 +200,13 @@ public class NPReductionController implements Initializable {
 
     @FXML
     private void exit(ActionEvent event) {
+        timeline.stop();
+        mediaPlayer.stop();
      Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
     }
 
-    @FXML
-    private void goto_pproblemreduc(ActionEvent event) throws IOException {
-    Stage stagea = (Stage) exit_btn.getScene().getWindow();
-       stagea.close();
-     
-    //open the next stage - introintrofxml
-        FXMLLoader fxmlLoader = new 
-        FXMLLoader(getClass().getResource("PReduction.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        //set what you want on your stage
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("P-problem Reduction");
-        stage.setScene(new Scene(root1));
-        stage.setResizable(false);
-        stage.show();
-    }
+    
     Timeline timeline = new Timeline();
     
     URL fileUrl = CCVISProject.class.getResource("other_useful_resources/vertex_cover.mp3");
@@ -301,6 +283,8 @@ public class NPReductionController implements Initializable {
     
      @FXML
     private void goto_bigidea_pprob(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -320,6 +304,8 @@ public class NPReductionController implements Initializable {
 
     @FXML
     private void goto_bigidea_npprob(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -339,6 +325,8 @@ public class NPReductionController implements Initializable {
 
     @FXML
     private void goto_bigidea_npcomp(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -358,6 +346,8 @@ public class NPReductionController implements Initializable {
 
     @FXML
     private void goto_bigidea_nphard(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
         Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -377,6 +367,8 @@ public class NPReductionController implements Initializable {
 
     @FXML
     private void goto_bigidea_euler(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
          Stage stagea = (Stage) exit_btn.getScene().getWindow();
        stagea.close();
      
@@ -393,6 +385,45 @@ public class NPReductionController implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-
+    
+    @FXML
+    private void goto_catcomp(ActionEvent event) throws IOException {
+        
+         timeline.stop();
+        mediaPlayer.stop();
+    Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("CategorizeCompFXML.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Categorize Complexity problem");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
+    }
+@FXML
+    private void goto_pproblemreduc(ActionEvent event) throws IOException {
+        timeline.stop();
+        mediaPlayer.stop();
+    Stage stagea = (Stage) exit_btn.getScene().getWindow();
+       stagea.close();
+     
+    //open the next stage - introintrofxml
+        FXMLLoader fxmlLoader = new 
+        FXMLLoader(getClass().getResource("PReduction.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("P-problem Reduction");
+        stage.setScene(new Scene(root1));
+        stage.setResizable(false);
+        stage.show();
+    }
     
 }
