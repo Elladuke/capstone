@@ -417,10 +417,10 @@ public class AnimationtwoController implements Initializable {
         
        
       Image image;
-  String imageLocation = "/other_useful_resources/knapsack.png";
+  String imageLocation = "other_useful_resources/knapsack.png";
 
+      //image = new Image(this.getClass().getResourceAsStream(imageLocation));
       image = new Image(this.getClass().getResourceAsStream(imageLocation));
-   
       //Setting the image view 
       ImageView imageView = new ImageView(image); 
       
@@ -565,7 +565,7 @@ public class AnimationtwoController implements Initializable {
       //put the right gold bars on the right side of the knapsack
       for (int i = 0; i < weight_list.length; i++){
           Image gold;
-          String goldLocation = "/other_useful_resources/gold.png";
+          String goldLocation = "other_useful_resources/gold.png";
           gold = new Image(this.getClass().getResourceAsStream(goldLocation));
           //Setting the image view
           ImageView goldview = new ImageView(gold);
@@ -609,7 +609,7 @@ public class AnimationtwoController implements Initializable {
       //put the gold bars on the left side of the knapsack...animate the left side.
       for (int i = 0; i < weights.length; i++){
         Image gold;
-       String goldLocation = "/other_useful_resources/gold.png";
+       String goldLocation = "other_useful_resources/gold.png";
           gold = new Image(this.getClass().getResourceAsStream(goldLocation));
         ImageView goldview = new ImageView(gold); 
         //Setting the position of the gold bar 

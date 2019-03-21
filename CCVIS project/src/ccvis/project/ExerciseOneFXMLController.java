@@ -127,14 +127,14 @@ public class ExerciseOneFXMLController implements Initializable {
     @FXML
     private void clicked_rb4(ActionEvent event) {
          if(rb4.isSelected()){
-            ans1.setText("Correct! M-Coloring is a P problem");
+            ans1.setText("Correct! The halting problem has no solution");
         }
     }
 
     @FXML
     private void clicked_rb3(ActionEvent event) {
          if(rb3.isSelected()){
-            ans1.setText("Not quite.");
+            ans1.setText("Mm... try again.");
         }
     }
 

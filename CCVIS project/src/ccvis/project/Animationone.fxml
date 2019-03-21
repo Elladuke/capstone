@@ -70,8 +70,8 @@
             <Label layoutX="56.0" layoutY="358.0" prefHeight="25.0" prefWidth="530.0" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="A value graph[i][j] is 1 if there is a direct edge from i to j, otherwise " />
             <Label layoutX="49.0" layoutY="397.0" prefHeight="25.0" prefWidth="564.0" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="graph[i][j] is 0. An integer m which is maximum number of colors that" />
             <Label layoutX="279.0" layoutY="438.0" prefHeight="25.0" prefWidth="105.0" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text="can be used." />
-            <Label layoutX="38.0" layoutY="275.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Input" />
-            <Label layoutX="62.0" layoutY="478.0" styleClass="labels" stylesheets="file:/C:/Users/Immanuella%20Duke/OneDrive%20-%20Ashesi%20University/Documents/NetBeansProjects/CCVIS%20project/other_useful_resources/labels.css" text="Output" />
+            <Label layoutX="38.0" layoutY="275.0" styleClass="labels" stylesheets="@other_useful_resources/labels.css" text="Input" />
+            <Label layoutX="62.0" layoutY="478.0" styleClass="labels" stylesheets="@other_useful_resources/labels.css" text="Output" />
             <Label layoutX="130.0" layoutY="478.0" prefHeight="25.0" prefWidth="473.0" styleClass="smalllabels" stylesheets="@other_useful_resources/labels.css" text=": A completely and correctly colored graph with m colors" />
             <Button fx:id="anim1_next_btn1" layoutX="504.0" layoutY="523.0" mnemonicParsing="false" onAction="#goto_pproblem_anim" prefHeight="37.0" prefWidth="73.0" styleClass="button_anim" stylesheets="@other_useful_resources/buttons.css" text="Done" />
          </children>

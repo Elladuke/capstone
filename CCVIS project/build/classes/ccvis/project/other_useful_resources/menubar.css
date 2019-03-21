@@ -1,0 +1,71 @@
+.menubar{
+   -fx-background-color: #ff9f1c; 
+   -fx-text-fill: #011627; 
+   -fx-font-family: Garamond;
+   -fx-font-size: 18px;
+ 
+
+}
+.menubar_anim{
+   -fx-background-color: #f71735;
+   -fx-text-fill: #011627; 
+   -fx-font-family: Garamond;
+   -fx-font-size: 18px;
+ 
+
+}
+.menu{
+	-fx-background-color: #ff9f1c; 
+	-fx-text-fill: #011627; 
+   -fx-font-family: Garamond;
+   -fx-font-size: 18px;
+}
+.menu_anim{
+   -fx-background-color: #f71735;
+   -fx-text-fill: #011627; 
+   -fx-font-family: Garamond;
+   -fx-font-size: 18px;
+ 
+
+}
+
+.menuitem{
+	-fx-text-fill: #011627; 
+	-fx-background-color: #ff9f1c;
+   -fx-font-family: Garamond;
+   -fx-font-size: 18px;
+}
+.menuitem_anim{
+	-fx-text-fill: #011627; 
+	-fx-background-color: #f71735;
+   -fx-font-family: Garamond;
+   -fx-font-size: 18px;
+}
+.menu:hover{
+
+ -fx-background-color: #f71735; 
+ -fx-text-fill: #011627; 
+}
+.menu_anim:hover{
+
+ -fx-background-color: #ff9f1c; 
+ -fx-text-fill: #011627; 
+}
+
+
+.menuitem:hover{
+	-fx-background-color: #ff9f1c;  
+	-fx-text-fill: #fdfffc; 
+
+}
+
+
+.menuitem_anim:hover{
+	-fx-background-color: #f71735;  
+	-fx-text-fill: #fdfffc; 
+
+}
+
+.menuitem:active{
+	-fx-text-fill: #fdfffc; 
+}

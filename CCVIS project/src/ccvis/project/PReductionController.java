@@ -98,7 +98,8 @@ public class PReductionController implements Initializable {
         Line l = new Line(startx,starty,endx,endy);               
         return l;
      }
-     private CubicCurve makeArc(double startx, double starty,double conx1, double cony1,double conx2 , double cony2,double endx, double endy){
+     private CubicCurve makeArc(double startx, double starty,double conx1, 
+             double cony1,double conx2 , double cony2,double endx, double endy){
         CubicCurve cubic = new CubicCurve();
         cubic.setStartX(startx);
         cubic.setStartY(starty);
@@ -111,14 +112,17 @@ public class PReductionController implements Initializable {
         return cubic;
     }
      Timeline timeline = new Timeline();
-     String musicFile = "C:\\Users\\Immanuella Duke\\OneDrive - Ashesi University\\Documents\\NetBeansProjects\\CCVIS project\\other_useful_resources\\sound.mp3";     // For example
-
-     Media sound = new Media(new File(musicFile).toURI().toString());
+    
+    URL fileUrl = CCVISProject.class.getResource("other_useful_resources/sound.mp3");
+     
+     Media sound = new Media(fileUrl.toString());
      MediaPlayer mediaPlayer = new MediaPlayer(sound);
     Group root = new Group();
       
     private void start_helper(){
+        //System.out.println("music file "+System.getProperty("user.dir")+"other_useful_resources/sound.mp3" );
         //first set of circles
+        
         if (root.getChildren().isEmpty()){
         
             Stage primaryStage = (Stage) exit_btn.getScene().getWindow();
@@ -129,7 +133,7 @@ public class PReductionController implements Initializable {
             Group lines = new Group();
 
 
-            Color co [] = {Color.MAGENTA, Color.DODGERBLUE, Color.YELLOW, Color.DARKVIOLET,Color.LIMEGREEN};
+            Color co [] = {Color.MAGENTA, Color.DODGERBLUE, Color.YELLOW, Color.DARKVIOLET,Color.LIMEGREEN, Color.LEMONCHIFFON};
             //create c1
 
                 Circle c1 = makeCircle(co[0], 20, 200, 200);
@@ -139,21 +143,20 @@ public class PReductionController implements Initializable {
                  Circle c2 = makeCircle(co[1], 20, 150, 250);
                  Label l2 = makeLabel("F", 140, 240);
                  Line line1 = makeLine(150,250,250,250);
-            //    circles.getChildren().add(c2);
+          
                 //create c3
                  Circle c3 = makeCircle(co[2], 20, 250, 250);
                  Label l3 = makeLabel("T", 240, 240);
                  Line line2 = makeLine(200,200,250,250);
-              //  circles.getChildren().add(c3);
+      
 
               Label lc = makeLabel("Color the three vertices differently", 240, 190);
-            //root.getChildren().add(circles);
+   
 
             Duration timepoint = Duration.ZERO ;
-            Duration pause = Duration.seconds(1);
+            Duration pause = Duration.seconds(3);
 
 
-            //mediaPlayer.play();
             //add first circle
             KeyFrame initial = new KeyFrame(timepoint, e -> circles.getChildren().add(c1));
             KeyFrame initial1 = new KeyFrame(timepoint, e -> labels.getChildren().add(l1));
@@ -183,7 +186,7 @@ public class PReductionController implements Initializable {
             timepoint = timepoint.add(pause);
             timepoint = timepoint.add(pause);
             //draw p
-             Circle c4 = makeCircle(co[3], 20, 350, 250);
+             Circle c4 = makeCircle(co[2], 20, 350, 250);
              Label l4 = makeLabel("P", 340, 240);
              Label l5 = makeLabel("Force P to be truth colored", 380, 240);
              timepoint = timepoint.add(pause);
@@ -203,7 +206,7 @@ public class PReductionController implements Initializable {
             timeline.getKeyFrames().add(k_np);
 
             //draw not p
-             Circle p4 = makeCircle(co[3], 40, 350, 350);
+             Circle p4 = makeCircle(co[1], 40, 350, 350);
              Label pl4 = makeLabel("NOT(P)", 315, 340);
              Label pl5 = makeLabel("simulate NOT", 410, 340);
              timepoint = timepoint.add(pause);
@@ -232,6 +235,26 @@ public class PReductionController implements Initializable {
             KeyFrame k_pnp = new KeyFrame(timepoint, e -> lines.getChildren().add(pnp));
             timeline.getKeyFrames().add(k_pnp);
 
+            //code for simulate OR
+            
+                 Circle orc1 = makeCircle(co[5], 35, 190, 490);
+                Label orl1 = makeLabel("P or Q", 190, 490);
+                Line orline = makeLine(200,500,150,550);
+                //create c2
+                 Circle orc2 = makeCircle(co[5], 20, 150, 550);
+                 Label orl2 = makeLabel("Q", 140, 540);
+                 Line orline1 = makeLine(150,550,250,550);
+          
+                //create c3
+                 Circle orc3 = makeCircle(co[5], 20, 250, 550);
+                 Label orl3 = makeLabel("P", 230, 540);
+                 Line orline2 = makeLine(200,500,250,550);
+            
+            timepoint = timepoint.add(pause);
+            timepoint = timepoint.add(pause);
+            timepoint = timepoint.add(pause);
+            timepoint = timepoint.add(pause);
+            timepoint = timepoint.add(pause);
 
             root.getChildren().add(lines);
 
@@ -243,17 +266,11 @@ public class PReductionController implements Initializable {
             apane.getChildren().add(root);
     }//end of if
         
+  
         else{//do nothing}
                 }                
     }
-    /*
-     @FXML
-    private void play_anim(ActionEvent event) {
-        //wipe pane first
-        //root.getChildren().clear();
-        start_helper();
-        play_anim(event);
-    }*/
+    
     
     @FXML
     private void goto_welcome(ActionEvent event) throws IOException {
